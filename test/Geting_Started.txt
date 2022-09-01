@@ -1,0 +1,20 @@
+Getting started :
+1- Create an astry account Login to the site : https://developers.artsy.net/
+2- Create my application
+3- Use my App :
+	Name	My_app
+	Client Id	209a1c82e9b4f9a89458
+	Client Secret	ec0ced6f288f844a0696ee9027f83696
+
+3- Get a Token :
+(Obtain an authentication token that can be used to make API requests by POSTing to /api/tokens/xapp_token.)
+
+curl -v -X POST "https://api.artsy.net/api/tokens/xapp_token?client_id=209a1c82e9b4f9a89458&client_secret=ec0ced6f288f844a0696ee9027f83696"
+
+My Token:
+"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsInN1YmplY3RfYXBwbGljYXRpb24iOiI2MzBmMjhiNTg4ZGEzYTAwMGI4MjU2NmUiLCJleHAiOjE2NjI1NDI2NDYsImlhdCI6MTY2MTkzNzg0NiwiYXVkIjoiNjMwZjI4YjU4OGRhM2EwMDBiODI1NjZlIiwiaXNzIjoiR3Jhdml0eSIsImp0aSI6IjYzMGYyOGI2MzA0ZjZkMDAwZTgyN2ZhZiJ9.BrWa-dZxBomQmbPept7-5RHAvKYTgjy4fEgipdJCUOw"
+
+4- Make Requests:
+(The token can be used to make API requests.)
+curl -v "https://api.artsy.net/api/artists" -H "X-XAPP-Token: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsInN1YmplY3RfYXBwbGljYXRpb24iOiI2MzBmMjhiNTg4ZGEzYTAwMGI4MjU2NmUiLCJleHAiOjE2NjI1NDI2NDYsImlhdCI6MTY2MTkzNzg0NiwiYXVkIjoiNjMwZjI4YjU4OGRhM2EwMDBiODI1NjZlIiwiaXNzIjoiR3Jhdml0eSIsImp0aSI6IjYzMGYyOGI2MzA0ZjZkMDAwZTgyN2ZhZiJ9.BrWa-dZxBomQmbPept7-5RHAvKYTgjy4fEgipdJCUOw
+	
